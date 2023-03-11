@@ -1,4 +1,4 @@
-# FruitTrove
+# Fruit Trove
 COMP-3020 High-fidelity Prototype
 
 • js folder contains all the JavaScript files for the project.
