@@ -1,12 +1,166 @@
 body {
+  margin: 0;
+  padding: 0;
+  background-color: #303030; /* This should not neccesarily be visable */
+  font-family: Poppins, sans-serif;
+}
+
+.list {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+
+.search,
+.sort {
+  font-size: 2em;
+  color: #FFF;
+  font-weight: bold;
+  font-family: Poppins, sans-serif;
+  background-color: #303030;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.container {  
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Side-Bar Categories Categories"
+    "Side-Bar Main-View Main-View"
+    "Side-Bar Main-View Main-View";
+}
+
+.mainview { 
+  grid-area: Main-View;
+  width: 100%; 
+  height: 100%;
+  background-color: #525252;
+}
+
+.categories { 
+  grid-area: Categories; 
+  width: 100%; 
+  height: auto; 
+  background-color: #696969;
+  align-items: stretch;
+}
+
+.sidebar { 
+  grid-area: Side-Bar; 
+  width: 100%; 
+  height: 100%;
+  background-color: #808080;
+}
+
+.title{
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 100px;
+}
+
+.sidelist{
+  font-size: 2em;
+}
+
+.icon {
+  display: block;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#button-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
-.title {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
+/* the button itself*/
+.category-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8; /* change this later, probably  no background */
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
 }
+
+.category-button:hover{
+  background-color:#525252;
+  color: white;
+}
+
+.category-button:hover .inverted {
+  filter: invert(100%);
+}
+
+/* image on the button */
+.category-button img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0px;
+}
+
+.category-padding {
+  padding-right: 5%;
+}
+
+.highlight {
+  background-color: #4CAF50
+}
+
+.top-left-image {
+  display: inline-block;
+  vertical-align: middle;
+
+  /* this is for the image */
+  width: 3vw;
+  height: 3vw;
+  margin-right: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.top-left-text {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 20px;
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+
+
+/*<!-- me messing around for the 3bars cool effect
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+
+*/
