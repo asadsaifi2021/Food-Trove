@@ -1,27 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Food Trove</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
 
-    <meta name="theme-color" content="#fafafa">
-</head>
+    <meta name="theme-color" content="#fafafa" />
+  </head>
 
-<body>
+  <body>
+    <div class="container">
+      <!-- main page -->
+      <div class="mainview">
+        <p class="title">Welcome to Food Trove!</p>
+        <img class="icon" src="img\icon.png" />
+      </div>
 
-<!-- Add your site or application content here -->
-<p class="title">Hello! Welcome to Food Trove!!</p>
-</body>
+      <!-- top bar -->
+      <div class="categories">
+        <div id="button-row">
+          <button
+            class="category-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+          >
+            <h1 class="category-padding">Grains</h1>
+            <img
+              class="inverted"
+              src="./img/Navbar Icons/grainsnav.png"
+              alt="grains.img"
+            />
+          </button>
+          <button
+            class="category-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+          >
+            <h1 class="category-padding">Fruits</h1>
+            <img
+              class="inverted"
+              src="./img/Navbar Icons/fruitsnav.png"
+              alt="fruits.img"
+            />
+          </button>
+          <button
+            class="category-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+          >
+            <h1 class="category-padding">Vegetables</h1>
+            <img
+              class="inverted"
+              src="./img/Navbar Icons/vegnav.png"
+              alt="vegetables.img"
+            />
+          </button>
+          <button
+            class="category-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+          >
+            <h1 class="category-padding">Protein</h1>
+            <img
+              class="inverted"
+              src="./img/Navbar Icons/meatnav.png"
+              alt="protein.img"
+            />
+          </button>
+          <button
+            class="category-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+          >
+            <h1 class="category-padding">Dairy</h1>
+            <img
+              class="inverted"
+              src="./img/Navbar Icons/dairynav.png"
+              alt="dairy.img"
+            />
+          </button>
+        </div>
+      </div>
+      <!-- me again for the 3 bar cool effect 
+      <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      </div>
+      
+      -->
 
+      <!-- side bar -->
+      <div class="sidebar">
+        <div class="image-and-text">
+          <img class="top-left-image" src="./img/icon.png" alt="Your Image" />
+          <span class="top-left-text">Food Trove</span>
+        </div>
+        <div class="list">
+          <div class="search">
+            Search:
+            <input placeholder="Search Here..." />
+          </div>
+          <div class="sort">Sort By:</div>
+        </div>
+        <!-- list of options -->
+        <ul class="sidelist">
+          <li><a href="#">Sort Option 1</a></li>
+          <li><a href="#">Sort Option 2</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
+
+<!-- TODO LIST 
+
+  You can work on anything you want at any time, but it wont be done on live production.
+  So have it ready (code snippets) for tomorrow.#
+
+  General implementations of anything or research is greatly beneficial:
+  - Sort Algorithms
+  - Item Objects (an apple has an image, name, weight, color, cost, etc.)
+  - General Beutifying of the Site
+  - Search functions (simple or otherwise)
+  - Cart for Checkout
+  - Adding / Removing items from cart for checkout and price summation
+  - Anything I missed that is shown on our diagram
+
+-->
