@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Place favicon.ico in the root directory -->
+    <link rel="icon" type="image/png" href="./img/icon.png" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="./js/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,9 +26,17 @@
     <div class="container">
       <!-- main page -->
       <div class="mainview">
-        <p class="title">Welcome to Food Trove!</p>
-        <img class="icon" src="img\icon.png" />
+        <div class="landing">
+          <p class="title">Welcome to Food Trove!</p>
+          <img class="icon" src="img\icon.png" />
+        </div>
+        <div class="items">
+          <div id="item-list" class="grid-container"></div>
+          <script src="./js/items.js"></script>
+        </div>
       </div>
+
+      <!-- Food items list will be here-->
 
       <!-- top bar -->
       <div class="categories">
@@ -35,8 +45,9 @@
             class="category-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
+            onclick="handleButtonClick('grains', this)"
           >
-            <h1 class="category-padding">Grains</h1>
+            <h1 class="category-text">Grains</h1>
             <img
               class="inverted"
               src="./img/Navbar Icons/grainsnav.png"
@@ -47,8 +58,9 @@
             class="category-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
+            onclick="handleButtonClick('fruits', this)"
           >
-            <h1 class="category-padding">Fruits</h1>
+            <h1 class="category-text">Fruits</h1>
             <img
               class="inverted"
               src="./img/Navbar Icons/fruitsnav.png"
@@ -59,8 +71,9 @@
             class="category-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
+            onclick="handleButtonClick('vegetables', this)"
           >
-            <h1 class="category-padding">Vegetables</h1>
+            <h1 class="category-text">Vegetables</h1>
             <img
               class="inverted"
               src="./img/Navbar Icons/vegnav.png"
@@ -71,8 +84,9 @@
             class="category-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
+            onclick="handleButtonClick('protein', this)"
           >
-            <h1 class="category-padding">Protein</h1>
+            <h1 class="category-text">Protein</h1>
             <img
               class="inverted"
               src="./img/Navbar Icons/meatnav.png"
@@ -83,8 +97,9 @@
             class="category-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
+            onclick="handleButtonClick('dairy', this)"
           >
-            <h1 class="category-padding">Dairy</h1>
+            <h1 class="category-text">Dairy</h1>
             <img
               class="inverted"
               src="./img/Navbar Icons/dairynav.png"
@@ -93,14 +108,6 @@
           </button>
         </div>
       </div>
-      <!-- me again for the 3 bar cool effect 
-      <div class="container" onclick="myFunction(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      </div>
-      
-      -->
 
       <!-- side bar -->
       <div class="sidebar">
@@ -109,19 +116,61 @@
           <span class="top-left-text">Food Trove</span>
         </div>
         <div class="list">
-          <div class="search">
-            Search:
-            <input placeholder="Search Here..." />
-          </div>
+          <input class="search-bar" placeholder="Search Here..." />
           <div class="sort">Sort By:</div>
         </div>
         <!-- list of options -->
         <ul class="sidelist">
-          <li><a href="#">Sort Option 1</a></li>
-          <li><a href="#">Sort Option 2</a></li>
+          <li>
+            <a href="#">•Price</a
+            ><img class="sort-img-icons" src="./img/SortIcons/price.png" />
+          </li>
+          <li>
+            <a href="#">•Weight</a
+            ><img class="sort-img-icons" src="./img/SortIcons/weight.png" />
+          </li>
+          <li>
+            <a href="#">•Color</a
+            ><img class="sort-img-icons" src="./img/SortIcons/color.png" />
+          </li>
+          <li>
+            <a href="#">•CO2</a
+            ><img class="sort-img-icons" src="./img/SortIcons/CO2.png" />
+          </li>
+          <li>
+            <a href="#">•Energy</a
+            ><img class="sort-img-icons" src="./img/SortIcons/energy.png" />
+          </li>
+        </ul>
+        <div class="cart">
+          <span class="cart-text">Cart</span>
+          <img class="cart-image" src="./img/cart.png" alt="cart" />
+        </div>
+        <div class="Total cost">
+          <span class="total-cost">Total: $</span>
+        </div>
+      </div>
+    </div>
+    <!---foote goes here-->
+    <!--
+  <footer>
+    <div class="footer-content">
+      <h3>Food Trove</h3>
+      <p>You've reached the end of our website.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; <a href="#">Food Trove</a></p>
+      <div class="footer-menu">
+        <ul class="f-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
     </div>
+  </footer>
+  -->
+    <!--footer end here-->
   </body>
 </html>
 
