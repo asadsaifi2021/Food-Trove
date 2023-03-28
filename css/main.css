@@ -10,24 +10,20 @@ body {
   font-family: Poppins, sans-serif;
 }
 
-.list {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-}
-
 .search,
 .sort {
-  font-size: 2em;
+  font-size: 40px;
   color: #FFF;
   font-weight: bold;
   font-family: Poppins, sans-serif;
   background-color: #303030;
+  width: 100%
 }
 
 .search-bar{
-  height: 40px; 
+  height: 5vh; 
   font-size: 16px;
-  width: auto;
+  width: 97.5%;
 }
 
 .content {
@@ -54,6 +50,7 @@ body {
   width: 100%; 
   height: 100%;
   background-color: #525252;
+  overflow: auto;
 }
 
 .categories { 
@@ -76,10 +73,6 @@ body {
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 5vw;
-}
-
-.sidelist{
-  font-size: 2em;
 }
 
 .icon {
@@ -170,14 +163,25 @@ body {
   cursor: pointer;
 }
 
-li {
-  display: flex;
-  align-items: center; /* align items vertically center within the container */
-  flex-direction: row;
+.sidelist{
+  font-size: 2vw;
 }
 
-li a {
-  margin-right: 1px; /* add some space between the link and the image */
+.sidelist li {
+  list-style:disc;
+  margin-bottom: 10px;
+  font-size: 2vw;
+}
+
+.sidelist li a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.sidelist li img {
+  float: right;
+  width: 3vw;
+  height: 3vw;
 }
 
 .hidden{
@@ -185,37 +189,34 @@ li a {
 }
 
 .sort-img-icons {
-  width: 3vw;
-  height: 3vw;
+  width: 2vw;
+  height: 2vw;
   flex-direction: row;
-  margin-left: 3vw;
+  padding-right: 1vw;
+  float: right;
+}
+
+.sort-text {
+  font-size: 2vw;
 }
 
 .cart-image{
-  padding-left: 100px;
-  height: 20px; 
-  font-size: 16px;
-  width: auto;
+  height: 2vw; 
+  width: 2vw;
+  float: right;
+  padding-right: 2vw;
 }
 
 .cart-text{
-  padding-left: 5px;
+  padding-left: 20px;
   height: 20px; 
-  font-size: 16px;
-  width: auto;
+  font-size: 1.5vw;
 }
 
 .total-cost{
-  padding-left: 5px;
+  padding-left: 20px;
   height: 20px; 
   font-size: 16px;
-  width: auto;
-}
-
-.item-img{
-  width: 350px;
-  height: 350px;
-
 }
 
 .grid-container {
@@ -232,6 +233,8 @@ li a {
   justify-content: center;
   padding: 10px;
   border: 1px solid black;
+  background-color: #8d8d8d;
+  border-radius: 0.5rem;
 }
 
 .grid-item img {
