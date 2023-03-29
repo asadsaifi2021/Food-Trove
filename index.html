@@ -28,6 +28,7 @@
       <div class="mainview">
         <div class="landing">
           <p class="title">Welcome to Food Trove!</p>
+          <p class="begin-title">Select a food group to begin.</p>
           <img class="icon" src="img\icon.png" />
         </div>
         <div class="items">
@@ -42,7 +43,7 @@
       <div class="categories">
         <div id="button-row">
           <button
-            class="category-button"
+            class="category-button main-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
             onclick="handleButtonClick('grains', this)"
@@ -55,7 +56,7 @@
             />
           </button>
           <button
-            class="category-button"
+            class="category-button main-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
             onclick="handleButtonClick('fruits', this)"
@@ -68,7 +69,7 @@
             />
           </button>
           <button
-            class="category-button"
+            class="category-button main-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
             onclick="handleButtonClick('vegetables', this)"
@@ -81,7 +82,7 @@
             />
           </button>
           <button
-            class="category-button"
+            class="category-button main-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
             onclick="handleButtonClick('protein', this)"
@@ -94,7 +95,7 @@
             />
           </button>
           <button
-            class="category-button"
+            class="category-button main-button"
             onmouseover="buttonHover(this)"
             onmouseout="buttonHover(this)"
             onclick="handleButtonClick('dairy', this)"
@@ -112,35 +113,82 @@
       <!-- side bar -->
       <div class="sidebar">
         <div class="image-and-text">
-          <img class="top-left-image" src="./img/icon.png" alt="Your Image" />
+          <img class="top-left-image" src="./img/icon.png" alt="^.^" />
           <span class="top-left-text">Food Trove</span>
         </div>
         <div class="list">
-          <input class="search-bar" placeholder="Search Here..." />
-          <div class="sort">Sort By:</div>
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="🔍 Search Here..."
+          />
+          <div class="sort">📶 Sort By...</div>
         </div>
-        <!-- list of options -->
         <ul class="sidelist">
-          <li>
-            <a class="sort-text" href="#">Price</a>
-            <img class="sort-img-icons" src="./img/SortIcons/price.png" />
-          </li>
-          <li>
-            <a class="sort-text" href="#">Weight</a>
-            <img class="sort-img-icons" src="./img/SortIcons/weight.png" />
-          </li>
-          <li>
-            <a class="sort-text" href="#">Color</a>
-            <img class="sort-img-icons" src="./img/SortIcons/color.png" />
-          </li>
-          <li>
-            <a class="sort-text" href="#">CO2</a>
-            <img class="sort-img-icons" src="./img/SortIcons/CO2.png" />
-          </li>
-          <li>
-            <a class="sort-text" href="#">Energy</a>
-            <img class="sort-img-icons" src="./img/SortIcons/energy.png" />
-          </li>
+          <button
+            class="category-button sort-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+            onclick="handleSortClick('price', this)"
+          >
+            <span class="sort-text">Price</span>
+            <img
+              class="sort-img-icons inverted"
+              src="./img/SortIcons/price.png"
+            />
+          </button>
+
+          <button
+            class="category-button sort-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+            onclick="handleSortClick('Weight', this)"
+          >
+            <span class="sort-text">Weight</span>
+            <img
+              class="sort-img-icons inverted"
+              src="./img/SortIcons/weight.png"
+            />
+          </button>
+
+          <button
+            class="category-button sort-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+            onclick="handleSortClick('Brightness', this)"
+          >
+            <span class="sort-text">Color</span>
+            <img
+              class="sort-img-icons inverted"
+              src="./img/SortIcons/color.png"
+            />
+          </button>
+
+          <button
+            class="category-button sort-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+            onclick="handleSortClick('CO2', this)"
+          >
+            <span class="sort-text">CO2 Emission</span>
+            <img
+              class="sort-img-icons inverted"
+              src="./img/SortIcons/CO2.png"
+            />
+          </button>
+
+          <button
+            class="category-button sort-button"
+            onmouseover="buttonHover(this)"
+            onmouseout="buttonHover(this)"
+            onclick="handleSortClick('Calories', this)"
+          >
+            <span class="sort-text">Calories</span>
+            <img
+              class="sort-img-icons inverted"
+              src="./img/SortIcons/energy.png"
+            />
+          </button>
         </ul>
         <div class="cart">
           <span class="cart-text">Cart</span>
@@ -151,41 +199,5 @@
         </div>
       </div>
     </div>
-    <!---foote goes here-->
-    <!--
-  <footer>
-    <div class="footer-content">
-      <h3>Food Trove</h3>
-      <p>You've reached the end of our website.</p>
-    </div>
-    <div class="footer-bottom">
-      <p>Copyright &copy; <a href="#">Food Trove</a></p>
-      <div class="footer-menu">
-        <ul class="f-menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-  -->
-    <!--footer end here-->
   </body>
 </html>
-
-<!-- TODO LIST 
-
-  You can work on anything you want at any time, but it wont be done on live production.
-  So have it ready (code snippets) for tomorrow.#
-
-  General implementations of anything or research is greatly beneficial:
-  - Sort Algorithms
-  - Item Objects (an apple has an image, name, weight, color, cost, etc.)
-  - General Beutifying of the Site
-  - Search functions (simple or otherwise)
-  - Cart for Checkout
-  - Adding / Removing items from cart for checkout and price summation
-  - Anything I missed that is shown on our diagram
-
--->
