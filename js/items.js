@@ -41,7 +41,7 @@ const items = [
     Brightness: 100,
     CO2: 10,
     Calories: 5,
-    imgurl: "./img/Vegetables/Tomatoes.png",
+    imgurl: "./img/Fruits/Tomatoes.png",
     quantity: 0,
   },
   {
