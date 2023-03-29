@@ -35,7 +35,7 @@ const items = [
   },
   {
     name: "Tomatoes",
-    category: "vegetables",
+    category: "fruits",
     price: 3.0,
     Weight: 10,
     Brightness: 100,
